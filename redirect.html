@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redirecting...</title>
+    <meta charset="UTF-8" />
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get("code");
+        if (code) {
+            window.location.href = `foxfollowers://callback?code=${code}`;
+        } else {
+            document.body.innerText = "No code found.";
+        }
+    </script>
+</head>
+
+<body>
+    Redirecting to app...
+</body>
+
+</html>
